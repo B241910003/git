@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class SimpleCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Engiin tooluur");
+        System.out.print("Ehnii too: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("hoyor doh too: ");
+        double num2 = scanner.nextDouble();
+
+        System.out.println("Uildlee songono uu (+, -, *, /): ");
+        char operation = scanner.next().charAt(0);
+
+        double result;
+
+        switch (operation) {
+            case '+':
+                result = num1 + num2;
+                System.out.println("Nemeh: " + result);
+                break;
+            case '-':
+                result = num1 - num2;
+                System.out.println("Hasah: " + result);
+                break;
+            case '*':
+                result = num1 * num2;
+                System.out.println("Urjuuleh: " + result);
+                break;
+            case '/':
+                if (num2 != 0) {
+                    result = num1 / num2;
+                    System.out.println("Huvaah: " + result);
+                } else {
+                    System.out.println("Too 0-d huvaagdah bolomjgui.");
+                }
+                break;
+            default:
+                System.out.println("Buruu uildel songoson baina.");
+        }
+
+        scanner.close();
+    }
+}
